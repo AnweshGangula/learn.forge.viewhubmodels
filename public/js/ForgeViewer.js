@@ -28,7 +28,8 @@ function launchViewer(urn, viewableId) {
   };
 
   Autodesk.Viewing.Initializer(options, () => {
-    viewer = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer'));
+    // Load an extension: https://learnforge.autodesk.io/#/viewer/extensions/skeleton?id=load-the-extension
+    viewer = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer'), { extensions: ['Autodesk.VisualClusters'] });
     viewer.start();
     var documentId = 'urn:' + urn;
     Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
