@@ -1,4 +1,5 @@
 /////////////////////////////////////////////////////////////////////
+// Autodesk Video Recordings: https://www.youtube.com/playlist?list=PLJbGSvNUq6VAaZL57IzDLvmo5NLdQreDe
 // Copyright (c) Autodesk, Inc. All rights reserved
 // Written by Forge Partner Development
 //
@@ -19,6 +20,10 @@
 const path = require('path');
 const express = require('express');
 const cookieSession = require('cookie-session');
+// dotenv is configured in launch.json file: https://stackoverflow.com/a/58127078/6908282
+// uncomment below code if you're not using the "Run and Debug" feature in VsCode to start the app
+const dotenv = require('dotenv');
+dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 const config = require('./config');

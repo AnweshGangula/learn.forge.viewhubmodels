@@ -11,7 +11,7 @@ pids
 *.pid
 *.seed
 *.pid.lock
-.vscode
+# .vscode
 package-lock.json
 .DS_Store
 
@@ -60,3 +60,4 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.test
